@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+    
+ /** Example 1 - Create element **/
+ 
+   /* var rootElement = React.createElement('div', {}, "Hello World!"); 
+    
+    ReactDOM.render(rootElement, document.getElementById('example'));*/
+ 
+ 
+ /**Example 2 - Complex HTML Structure **/
+
+ /***** HTML  ****
+ 
+ <div>
+    <h1>Contacts</h1>
+    <ul>
+        <li>
+            <h2>James Nelson</h2>
+            <a href="mailto:james@jamesknelson.com">james@jamesknelson.com</a>
+        </li>
+        
+        <li>
+            <h2>Joe Citizen</h2>
+            <a href="mailto:joe@example.com">joe@example.com</a>
+        </li>
+    </ul>
+  </div>
+ 
+ *******/
+    
+    
+   /* var rootElement =
+        React.createElement('div', {}, 
+    React.createElement('h1', {}, "Contacts"),
+    React.createElement('ul', {},
+      React.createElement('li', {},
+        React.createElement('h2', {}, "James Nelson"),
+        React.createElement('a', {href: 'mailto:james@jamesknelson.com'}, 'james@jamesknelson.com')
+      ),
+      React.createElement('li', {},
+        React.createElement('h2', {}, "Joe Citizen"),
+        React.createElement('a', {href: 'mailto:joe@example.com'}, 'joe@example.com')
+      )
+    )
+  ) 
+  
+  ReactDOM.render(rootElement, document.getElementById('example'));*/
+
+
+/** Example 3 - JSX **/
+
+   /*ReactDOM.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('example')
+      );
+     */
+    
+        
+    
+  /*  var helloWorld = <h1> Hello, amazing world ! </h1>
+    ReactDOM.render(
+        helloWorld,
+        document.getElementById('example')
+      );
+    */ 
+
+/* Example 4 - Component - React Class*/
+        
+        
+  /*  var HelloMessage = React.createClass({
+      render: function() {
+        return <div>Hello World using React.createClass!!!</div>;
+      }
+    });
+
+    ReactDOM.render(<HelloMessage />, document.getElementById('example')); */
+        
+        
+        
+/* Example 5 - Component - ES6 Class*/
+        
+   /** Notes from React Documentation : 
+   The API is similar to React.createClass with the exception of getInitialState. Instead of providing a separate getInitialState method,    you set up your own state property in the constructor. Just like the return value of getInitialState, the value you assign to              this.state will be used as the initial state for your component.
+
+   Another difference is that propTypes and defaultProps are defined as properties on the constructor instead of in the class body.
+   **/
+
+
+   /*
+   class HelloMessage extends React.Component {
+        render() {
+            return <div>Hello World using React.Component</div>;
+        }
+   }
+
+   ReactDOM.render(<HelloMessage/>, document.getElementById('example')); */
+
+        
+/* Example 6 - Component - Stateless function */
+        
+   /*
+   function HelloMessage() {
+       return <div>Hello World using function</div>;
+   }
+   ReactDOM.render(<HelloMessage />, document.getElementById('example'));
+   */
+   
+   
+   
+   /****** PROPS *****/
+   
+   /***** EXAMPLE 7 : Basics of Props *******/
+   
+   
+    /*
+    var HelloMessage = React.createClass({
+      render: function() {
+        return <div>Hello {this.props.name}</div>;
+      }
+    });
+
+    ReactDOM.render(<HelloMessage name="PK" />, document.getElementById('example'));
+    */
+    
+    /*
+    function HelloMessage(props) {
+       return <div>Hello {props.name}! using stateless function</div>;
+    }
+    ReactDOM.render(<HelloMessage name="PK" />, document.getElementById('example'));
+    */
+ 
+        
+</script>
+      
+    
+  </body>
+</html>
